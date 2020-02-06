@@ -1,0 +1,7 @@
+{% extends 'pet_vet/base.html'%} {% block content %}
+<h1>Sjednat schůzku</h1>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Sjednat schůzku" />
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'pet_vet/base.html'%} {% block content %}
+<h1>Naši veterináři</h1>
+<ul>
+  {% for vet in object_list %}
+  <li>{{ vet }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

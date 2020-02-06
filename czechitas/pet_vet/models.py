@@ -51,5 +51,5 @@ class Appointment(models.Model):
         return f'{self.date} - {self.get_pet_type_display()} - {self.preferred_vet}'
 
     def clean(self):
-        if self.date < datetime.date.today():
+        if self.date and self.date < datetime.date.today():
             raise ValidationError({'date': 'Datum návštěvy nemůže být v minulosti.'})

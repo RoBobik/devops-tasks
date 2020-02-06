@@ -1,4 +1,4 @@
-"""czechitas URL Configuration
+"""pet_vet URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -13,10 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
+
+from pet_vet import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('pet_vet.urls'))
+    path('', views.HomePageView.as_view(), name='home'),
+    path('sjednat-schuzku/', views.AppointmentCreateView.as_view(), name='appointment-create'),
+    path('nasi-veterinari/', views.VeterinarianListView.as_view(), name='veterinarian-list'),
+    path('kontakty/', views.ContactView.as_view(), name='contact'),
+    path('dekujeme/', views.ThanksView.as_view(), name='thanks'),
 ]
