@@ -13,10 +13,13 @@ class Veterinarian(models.Model):
 
     def __str__(self):
         """E.g. MVDr. John Doe, Ph.D. (Cats, Dogs)"""
+        return f'{self.full_name} ({self.specialization})'
+
+    @property
+    def full_name(self):
         return ' '.join([
             self.title_prefix + ' ' + self.first_name if self.title_prefix else self.first_name,
             self.last_name + ', ' + self.title_suffix if self.title_suffix else self.last_name,
-            ' (' + self.specialization + ')'
         ])
 
     class Meta:

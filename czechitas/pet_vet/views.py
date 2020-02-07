@@ -3,6 +3,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 
+from pet_vet.forms import AppointmentForm
 from pet_vet.models import Appointment, Veterinarian
 
 
@@ -12,8 +13,8 @@ class HomePageView(TemplateView):
 
 class AppointmentCreateView(CreateView):
     model = Appointment
+    form_class = AppointmentForm
     success_url = '/dekujeme/'
-    fields = ['date', 'name', 'phone', 'email', 'pet_type', 'preferred_vet']
 
 
 class VeterinarianListView(ListView):

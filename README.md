@@ -1,6 +1,6 @@
-# DevOps Tasks
+# PetVet
 
-Doprovodné úlohy pro DevOps workshop.
+Výuková aplikace pro DevOps workshop.
 
 # Jak aplikaci zprovoznit
 
