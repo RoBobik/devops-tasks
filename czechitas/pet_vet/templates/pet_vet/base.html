@@ -2,18 +2,22 @@
 
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="{% static 'pet_vet/css/bulma.min.css' %}" />
-    <title>PetVet - Kvalitní zdravotnické služby pro Vaše mazlíčky</title>
-  </head>
-  <body>
-    <div class="container">
-      {% include 'pet_vet/nav.html' %} {% block content %}{% endblock %}
-    </div>
 
-    <script src="{% static 'pet_vet/js/bulma-nav.js' %}"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="{% static 'pet_vet/css/bulma.min.css' %}" />
+  <title>PetVet - Kvalitní zdravotnické služby pro Vaše mazlíčky</title>
+</head>
+
+<body>
+  <div class="container">
+    {% include 'pet_vet/nav.html' %}
+    {% block content %}{% endblock %}
+  </div>
+
+  <script src="{% static 'pet_vet/js/bulma-nav.js' %}"></script>
+</body>
+
 </html>

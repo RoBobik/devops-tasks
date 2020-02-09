@@ -1,13 +1,15 @@
-{% extends 'pet_vet/base.html'%} {% block content %}
+{% extends 'pet_vet/base.html'%}
+
+{% block content %}
 
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title has-text-primary">
         PetVet
       </h1>
-      <h2 class="subtitle">
-        To jsou kvalitní zdravotnické služby pro Vaše mazlíčky.
+      <h2 class="subtitle has-text-grey-dark">
+        To jsou kvalitní zdravotnické služby pro Vaše mazlíčky
       </h2>
     </div>
   </div>
@@ -31,8 +33,9 @@
   <div class="container">
     <h1 class="title">
       Trápí Vašeho mazlíčka něco? Neváhejte a
-      <a class="has-text-primary" href="/sjednat-schuzku/"><strong>sjednejte si u nás schůzku</strong></a
-      >.
+      <a class="has-text-primary" href="{% url 'appointment-create' %}">
+        <strong>sjednejte si u nás schůzku</strong>
+      </a>.
     </h1>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae nostrum,

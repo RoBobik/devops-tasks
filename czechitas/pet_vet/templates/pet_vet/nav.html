@@ -1,32 +1,24 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/"
-      ><strong>PetVet/</strong>&nbsp;<small>veterinární klinika</small></a
-    >
+    <a class="navbar-item" href="/"><strong>PetVet/</strong>&nbsp;<small>veterinární klinika</small></a>
 
-    <a
-      role="button"
-      class="navbar-burger burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarBasicExample"
-    >
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div class="navbar-menu">
+  <div class="navbar-menu" id="navMenu">
     <div class="navbar-end">
-      <a class="navbar-item" href="/">Domů</a>
-      <a class="navbar-item" href="/nasi-veterinari/">Naši veterináři</a>
-      <a class="navbar-item" href="/kontakty/">Kontakty</a>
+      <a class="navbar-item" href="{% url 'home' %}">Domů</a>
+      <a class="navbar-item" href="{% url 'veterinarian-list' %}">Naši veterináři</a>
+      <a class="navbar-item" href="{% url 'contact' %}">Kontakty</a>
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary" href="/sjednat-schuzku/"
-            ><strong>Sjednat schůzku</strong></a
-          >
+          <a class="button is-primary" href="{% url 'appointment-create' %}">
+            <strong>Sjednat schůzku</strong>
+          </a>
         </div>
       </div>
     </div>

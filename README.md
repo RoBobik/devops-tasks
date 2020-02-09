@@ -2,6 +2,10 @@
 
 Výuková aplikace pro DevOps workshop.
 
+# Zadání - Úloha 1
+
+Zprovozněte aplikaci dle níže uvedeného postupu a ověřte její základní funkčnost.
+
 # Jak aplikaci zprovoznit
 
 - Nainstalovat Python 3.7.x

@@ -1,4 +1,6 @@
-{% extends 'pet_vet/base.html'%} {% block content %}
+{% extends 'pet_vet/base.html'%}
+
+{% block content %}
 
 <form method="post" novalidate>
   {% csrf_token %}
@@ -7,13 +9,12 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-two-thirds">
-          <h1 class="title">
-            Sjednat schůzku
-          </h1>
+          <h1 class="title">Sjednat schůzku</h1>
           <div class="field">
             <label class="label">{{form.date.label_tag}}</label>
             <div class="control">
-              {{form.date}} {% for error in form.date.errors %}
+              {{form.date}}
+              {% for error in form.date.errors %}
               <p class="help is-danger">{{error}}</p>
               {% endfor %}
             </div>
@@ -22,7 +23,8 @@
           <div class="field">
             <label class="label">{{form.name.label_tag}}</label>
             <div class="control">
-              {{form.name}} {% for error in form.name.errors %}
+              {{form.name}}
+              {% for error in form.name.errors %}
               <p class="help is-danger">{{error}}</p>
               {% endfor %}
             </div>
@@ -41,7 +43,8 @@
           <div class="field">
             <label class="label">{{form.email.label_tag}}</label>
             <div class="control">
-              {{form.email}} {% for error in form.email.errors %}
+              {{form.email}}
+              {% for error in form.email.errors %}
               <p class="help is-danger">{{error}}</p>
               {% endfor %}
             </div>
@@ -81,4 +84,5 @@
     </div>
   </section>
 </form>
+
 {% endblock %}
