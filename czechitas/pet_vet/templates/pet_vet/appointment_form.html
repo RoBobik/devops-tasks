@@ -1,4 +1,5 @@
 {% extends 'pet_vet/base.html'%}
+{% load static %}
 
 {% block content %}
 
@@ -41,7 +42,7 @@
           </div>
 
           <div class="field">
-            <label class="label">{{form.email.label_tag}}</label>
+            <label class="label">{{form.email.label_tag}} (volitelné)</label>
             <div class="control">
               {{form.email}}
               {% for error in form.email.errors %}
@@ -85,4 +86,20 @@
   </section>
 </form>
 
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'pet_vet/css/flatpickr.min.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'pet_vet/js/flatpickr.min.js' %}"></script>
+<script src="{% static 'pet_vet/js/flatpickr-cs.js' %}"></script>
+<script>
+  flatpickr("input[type=date]", {
+    dateFormat: "d.m.Y",
+    locale: "cs",
+    minDate: "today",
+  });
+</script>
 {% endblock %}
