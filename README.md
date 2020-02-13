@@ -19,3 +19,14 @@ Zprovozněte aplikaci dle níže uvedeného postupu a ověřte její základní 
 - Spustit DB migraci: `python manage.py migrate`
 - Vytvořit superuživatele: `python manage.py createsuperuser`
 - Spustit server: `python manage.py runserver`
+
+# Databáze
+
+Defaultně aplikace používá SQLite databázi. Jinou DB je možné využít nastavením proměnných prostředí:
+
+- `DB_ENGINE` (Např. `django.db.backends.sqlite3`)
+- `DB_NAME`
+- `DB_USER`
+- `DB_PASSWORD`
+- `DB_HOST`
+- `DB_PORT`
