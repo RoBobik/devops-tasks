@@ -8,7 +8,7 @@ Zprovozněte aplikaci dle níže uvedeného postupu a ověřte její základní 
 
 # Jak aplikaci zprovoznit
 
-- Nainstalovat Python 3.7.x
+- Nainstalovat Python >= 3.6
 - Vytvořit virtuální prostředí Pythonu: `python3 -m venv venv`
 - Aktivovat virtuální prostředí:
   - Linux/Mac: `source venv/bin/activate`
