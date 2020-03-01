@@ -1,0 +1,105 @@
+{% extends 'pet_vet/base.html'%}
+{% load static %}
+
+{% block content %}
+
+<form method="post" novalidate>
+  {% csrf_token %}
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <h1 class="title">Sjednat schůzku</h1>
+          <div class="field">
+            <label class="label">{{form.date.label_tag}}</label>
+            <div class="control">
+              {{form.date}}
+              {% for error in form.date.errors %}
+              <p class="help is-danger">{{error}}</p>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">{{form.name.label_tag}}</label>
+            <div class="control">
+              {{form.name}}
+              {% for error in form.name.errors %}
+              <p class="help is-danger">{{error}}</p>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">{{form.phone.label_tag}}</label>
+            <div class="control">
+              {{form.phone}}
+            </div>
+            {% for error in form.phone.errors %}
+            <p class="help is-danger">{{error}}</p>
+            {% endfor %}
+          </div>
+
+          <div class="field">
+            <label class="label">{{form.email.label_tag}} (volitelné)</label>
+            <div class="control">
+              {{form.email}}
+              {% for error in form.email.errors %}
+              <p class="help is-danger">{{error}}</p>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Druh mazlíčka</label>
+            <div class="control">
+              <div class="select">
+                {{form.pet_type}}
+              </div>
+              {% for error in form.pet_type.errors %}
+              <p class="help is-danger">{{error}}</p>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Preferovaný veterinář</label>
+            <div class="control">
+              <div class="select">
+                {{form.preferred_vet}}
+              </div>
+              {% for error in form.preferred_vet.errors %}
+              <p class="help is-danger">{{error}}</p>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="control">
+            <button class="button is-primary">
+              <strong>Sjednat schůzku</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'pet_vet/css/flatpickr.min.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'pet_vet/js/flatpickr.min.js' %}"></script>
+<script src="{% static 'pet_vet/js/flatpickr-cs.js' %}"></script>
+<script>
+  flatpickr("input[type=date]", {
+    dateFormat: "d.m.Y",
+    locale: "cs",
+    minDate: "today",
+  });
+</script>
+{% endblock %}

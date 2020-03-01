@@ -1,0 +1,32 @@
+{% extends 'pet_vet/base.html'%}
+
+{% block content %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Naši veterináři</h1>
+    <h2 class="subtitle">
+      Náš tým tvoří ti <strong>nejzkušenější</strong> zvěrolékaři. Každý lékař
+      se zaměřuje na úzkou oblast mazlíčků, které dokonale rozumí!
+    </h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Veterinář</th>
+          <th>Specializace</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for vet in object_list %}
+        <tr>
+          <td>{{vet.full_name}}</td>
+          <td>{{vet.specialization}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% endblock %}
