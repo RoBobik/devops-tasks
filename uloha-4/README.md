@@ -1,20 +1,11 @@
-# PetVet
+# Zadání - Úloha 4
 
-Výuková aplikace pro DevOps workshop.
+Databáze PostgreSQL, která běží ve vlastním kontejneru si ukládá data do adresáře `/var/lib/postgres/data`.
 
-# Zadání - Úloha 5
+Když je kontejner odstraněn, data jsou ztracena.
 
-V této úloze definujeme v `docker-compose.yml` novou slubu s databází a tu následně propojíme s aplikací.
+Úpravou `docker-compose.yml` přidejte Docker Volume pro výše uvedený adresář, aby po smazání kontejneru s databází a jeho opětovném vytvoření byla data stále k dispozici.
 
-Zároveň pomocí Docker
+Soubor `Dockerfile` je již přiložen a nepotřebuje další úpravy.
 
-# Databáze
-
-Defaultně aplikace používá SQLite databázi. Jinou DB je možné využít nastavením proměnných prostředí:
-
-- `DB_ENGINE` (Např. `django.db.backends.sqlite3`)
-- `DB_NAME`
-- `DB_USER`
-- `DB_PASSWORD`
-- `DB_HOST`
-- `DB_PORT`
+Máte rovněž připravený `docker-compose.yml`, který odpovídá dokončené předchozí úloze.

@@ -1,7 +1,20 @@
-version: "3.7"
+version: "3"
 
 services:
-  aplikace:
-    build: "."
+  app:
+    build: .
     ports:
       - 8000:8000
+    environment:
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=petvet
+      - DB_USER=petvet
+      - DB_PASSWORD=petvet
+      - DB_HOST=db
+      - DB_PORT=5432
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=petvet
+      - POSTGRES_DB=petvet
+      - POSTGRES_PASSWORD=petvet
