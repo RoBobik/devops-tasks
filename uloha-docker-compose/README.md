@@ -33,10 +33,10 @@ Nastavením těchto proměnných prostředí řeknete aplikaci, aby používala 
 
 Framework Django podporuje následující DB enginy (jejich název zde odpovídá proměnné `DB_ENGINE`):
 
-- 'django.db.backends.postgresql'
-- 'django.db.backends.mysql'
-- 'django.db.backends.sqlite3'
-- 'django.db.backends.oracle'
+- `django.db.backends.postgresql`
+- `django.db.backends.mysql`
+- `django.db.backends.sqlite3`
+- `django.db.backends.oracle`
 
 ## Zachování databázových dat
 
