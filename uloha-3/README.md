@@ -20,7 +20,7 @@ V takovém případě kontejner s aplikací zastavte a znovu spusťte. pokud jst
 
 Tento problém je možné vyřešit korektně, ale to je nad rámec této úlohy. :)
 
-Přehled příkazů pro `docker-compose` najdete na [stránkách workshopu](https://czechitas.orchi.page/linux/docker/).
+Přehled příkazů pro `docker-compose` najdete na [stránkách workshopu](https://czechitas.orchi.page/linux/uzitecne/docker/).
 
 ## Jak nastavit aplikaci, aby používala jinou databázi
 

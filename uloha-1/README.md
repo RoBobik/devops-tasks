@@ -14,7 +14,7 @@ Zprovozněte aplikaci dle níže uvedeného postupu a ověřte její základní 
 - Přejít do projektového podadresáře: `cd czechitas`
 - Spustit DB migraci: `python manage.py migrate`
 - Vytvořit superuživatele: `python manage.py createsuperuser`
-- Spustit server: `python manage.py runserver`
+- Spustit server: `gunicorn czechitas.wsgi`
 
 ## Ověřte funkčnost aplikace
 

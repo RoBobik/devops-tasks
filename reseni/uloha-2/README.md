@@ -15,11 +15,8 @@
 
    COPY czechitas .
 
-   # Flush buffer after every printed message to see all messages
-   ENV PYTHONUNBUFFERED=1
-
    # We need to listen on all networks interfaces to be able to connect from outside of the container
-   CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+   CMD ["gunicorn", "-b", "0.0.0.0:8000", "czechitas.wsgi"]
    ```
 
 2. Provedeme build image (musíme být v adresáři `uloha-2`):
