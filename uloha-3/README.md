@@ -1,4 +1,10 @@
-# Zadání - Úloha 3
+# Úloha 3
+
+## Cíl
+
+Vyzkoušet si skládání služeb (aplikace + databáze) pomocí `docker-compose`.
+
+## Zadání
 
 Vytvořte konfigurační soubor `docker-compose.yml`, pomocí kterého bude sestavena („zbuilděna“) naše aplikace.
 

@@ -1,4 +1,10 @@
-# Zadání - Úloha 4
+# Úloha 4
+
+## Cíl
+
+Zajistit trvalé uchování dat Dockerizované databáze pomocí Docker Volume.
+
+## Zadání
 
 Databáze PostgreSQL, která běží ve vlastním kontejneru si ukládá data do adresáře `/var/lib/postgres/data`.
 
