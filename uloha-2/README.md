@@ -8,7 +8,7 @@ Vyzkoušet si tvorbu `Dockerfile` souboru s použitím základních Docker pří
 
 Vytvořte `Dockerfile`, pomocí kterého automatizujete úvodní kroky a krok spuštění serveru, tedy:
 
-- Nainstalovat Python >= 3.6
+- Zajistit dostupnost Python3 >= 3.6
 - Nainstalovat závislosti: `pip install -r requirements.txt`
 - Spustit server tak, aby naslouchal na všech rozhraních: `gunicorn -b 0.0.0.0:8000`
 
@@ -18,7 +18,7 @@ Následně v běžícím kontejneru proveďte manuálně zbývající příkazy:
 - Spustit DB migraci: `python manage.py migrate`
 - Vytvořit superuživatele: `python manage.py createsuperuser`
 
-Užitečné instrukce pro `Dockerfile` najdete na [stránkách workshopu](https://czechitas.orchi.page/linux/uzitecne/docker/).
+Užitečné instrukce pro `Dockerfile` najdete kromě [dokumentace](https://docs.docker.com/engine/reference/builder/) také na [stránkách workshopu](https://czechitas.orchi.page/linux/uzitecne/docker/).
 
 ## Nápověda
 
@@ -27,7 +27,7 @@ Užitečné instrukce pro `Dockerfile` najdete na [stránkách workshopu](https:
 
 ## Už máte hotovo?
 
-1. Pomocí příkazů v `Dockerfile` automatizujte i zbylé manuální kroky (DB migrace a tvorba superuživatele).
+1. Jak byste mohli automatizovat i zbylé manuální kroky (DB migrace a tvorba superuživatele)?
 
 2. Zkuste vysvětlit, proč můžeme při použití Dockeru vynechat tyto kroky:
    - Vytvořit virtuální prostředí Pythonu: `python3 -m venv venv`

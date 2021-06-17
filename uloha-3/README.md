@@ -20,12 +20,6 @@ To samé proveďte pro službu databáze. Zde nastavte proměnné prostředí po
 - `POSTGRES_USER`
 - `POSTGRES_PASSWORD`
 
-Je velmi pravděpodobné, že po prvním spuštění příkazu `docker-compose up` spadne aplikace v kontejneru, protože se aplikace pokusí připojit k DB v okamžiku, kdy ještě nebude DB nastartovaná (první start trvá déle kvůli inicializaci).
-
-V takovém případě kontejner s aplikací zastavte a znovu spusťte. pokud jste použili jen příkaz `docker-compose up`, tak jej ukončete standardně pomocí `CTRL+C`, a následně spusťte znovu.
-
-Tento problém je možné vyřešit korektně, ale to je nad rámec této úlohy. :)
-
 Přehled příkazů pro `docker-compose` najdete na [stránkách workshopu](https://czechitas.orchi.page/linux/uzitecne/docker/).
 
 ## Jak nastavit aplikaci, aby používala jinou databázi

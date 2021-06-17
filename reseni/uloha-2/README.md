@@ -25,25 +25,54 @@
    docker build -t uloha-2 .
    ```
 
-3. Vytvoříme a spustíme kontejner na pozadí:
+3. Vytvoříme a spustíme kontejner:
 
    ```
-   docker run -d --rm -p 8000:8000 --name app-2 uloha-2
+   docker run -p 8000:8000 --name app-2 uloha-2
    ```
 
-4. Spustíme požadované příkazy v běžícím kontejneru:
+   Kontejner nyní běží v popředí - vidíme, co aplikace vypisuje na standardní výstup.
+
+4. V jiném terminálovém okně spustíme `docker ps` a podíváme se na jeho výstup. Vidíme, že kontejner s aplikací běží.
+
+5. Stiskem `Ctrl+C` v prvním terminálovém okně aplikaci zastavíme a zkontrolujeme, že není ve výstupu `docker ps`. Také ověříme, že po otevření stránky `http://localhost:8000` se aplikace už nenačte.
+
+6. Vypíšeme si pomocí `docker ps -a` i zastavené kontejnery, kde jej už uvidíme.
+
+7. Existující kontejner znovu nastartujeme (na pozadí): `docker start app-2`.
+
+8. Spustíme požadované příkazy dle původního postutpu (v běžícím kontejneru):
 
    ```
    docker exec app-2 python manage.py migrate
    docker exec -it app-2 python manage.py createsuperuser
    ```
 
-5. Otevřeme stránku `http://localhost:8000/nasi-veterinari/` a zkontrolujeme, že obsahuje seznam veterinářů načítaný z databáze a že nezobrazuje chybu.
+9. Otevřeme stránku `http://localhost:8000/nasi-veterinari/` a zkontrolujeme, že obsahuje seznam veterinářů načítaný z databáze a že nezobrazuje chybu.
 
-6. Otevřeme administraci aplikace na `http://localhost:8000/admin/` a přihlásíme se uživatelem, kterého jsme dříve vytvořili příkazem `createsuperuser`.
+10. Otevřeme administraci aplikace na `http://localhost:8000/admin/` a přihlásíme se uživatelem, kterého jsme dříve vytvořili příkazem `createsuperuser`.
 
-7. Zastavíme kontejner s aplikací: (Docker ho sám navíc odstraní, protože jsme použili parametr `--rm`.)
+11. Zastavíme kontejner s aplikací, který běží na pozadí a následně ho odstraníme:
 
-   ```
-   docker stop app-2
-   ```
+    ```
+    docker stop app-2
+    docker rm app-2
+    ```
+
+    Kontejner již není ani ve výstupu `docker ps -a`, protože je smazaný.
+
+12. Znovu kontejner vytvoříme a spustíme, ale tentokrát rovnou na pozadí volbou `-d` (`--detached`):
+
+    ```
+    docker run -d -p 8000:8000 --name app-2 uloha-2
+    ```
+
+13. Po otřevření aplikace vidíme, že jsme přišli o data, která existovala jen v již smazaném kontejneru: `http://localhost:8000/nasi-veterinari/`
+
+    Uchováním dat se zabývá úloha 4.
+
+14. Kontejner opět zastavíme, abychom předešli konfliktu s další úlohou, a smažeme:
+    ```
+    docker stop app-2
+    docker rm app-2
+    ```
