@@ -39,7 +39,7 @@
 
 7. Existující kontejner znovu nastartujeme (na pozadí): `docker start app-2`.
 
-8. Spustíme požadované příkazy dle původního postutpu (v běžícím kontejneru):
+8. Spustíme požadované příkazy dle původního postupu (v běžícím kontejneru):
 
    ```
    docker exec app-2 python manage.py migrate
