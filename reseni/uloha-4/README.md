@@ -27,7 +27,7 @@
        - data:/var/lib/postgresql/data
 
    volumes:
-   data:
+     data:
    ```
 
 2. Z adresáře `uloha-4` spustíme služby aplikace (`app`) a databáze (`db`) na pozadí:
