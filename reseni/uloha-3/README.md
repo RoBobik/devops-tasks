@@ -1,6 +1,4 @@
-# Řešení úloh
-
-## Úloha 3
+# Řešení úlohy 3
 
 1. V adresáři `uloha-3` vytvoříme soubor `docker-compose.yml`:
 

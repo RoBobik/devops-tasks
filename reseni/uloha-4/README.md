@@ -1,6 +1,4 @@
-# Řešení úloh
-
-## Úloha 4
+# Řešení úlohy 4
 
 1. V adresáři `uloha-4` upravíme existující soubor `docker-compose.yml` tak, aby obsahoval `volumes:`:
 

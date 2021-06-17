@@ -1,6 +1,4 @@
-# Řešení úloh
-
-## Úloha 2
+# Řešení úlohy 2
 
 1. V adresáři `uloha-2` vytvoříme soubor `Dockerfile`:
 
