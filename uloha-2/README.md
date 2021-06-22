@@ -10,7 +10,7 @@ Vytvořte `Dockerfile`, pomocí kterého automatizujete úvodní kroky a krok sp
 
 - Zajistit dostupnost Python3 >= 3.6
 - Nainstalovat závislosti: `pip install -r requirements.txt`
-- Spustit server tak, aby naslouchal na všech rozhraních: `gunicorn -b 0.0.0.0:8000`
+- Spustit server tak, aby naslouchal na všech rozhraních: `gunicorn -b 0.0.0.0:8000 czechitas.wsgi`
 
 Následně v běžícím kontejneru proveďte manuálně zbývající příkazy:
 

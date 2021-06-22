@@ -6,7 +6,7 @@ Zajistit trvalé uchování dat Dockerizované databáze pomocí Docker Volume.
 
 ## Zadání
 
-Databáze PostgreSQL, která běží ve vlastním kontejneru si ukládá data do adresáře `/var/lib/postgres/data`.
+Databáze PostgreSQL, která běží ve vlastním kontejneru si ukládá data do adresáře `/var/lib/postgresql/data`.
 
 Když je kontejner odstraněn, data jsou ztracena.
 
