@@ -1,9 +1,11 @@
-#!/bin/bash -x
+#!/usr/bin/env sh
 
-# Ugly hack to give database some time to initialize
+set -e
+
+echo "Waiting for DB before running migrations."
 sleep 5
 
 # Run database migrations
-python clinic/manage.py migrate --noinput || exit 1
+python manage.py migrate --noinput
 
 exec "$@"

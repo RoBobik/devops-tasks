@@ -1,14 +1,5 @@
 -r requirements.txt
 
-astroid==2.3.3
-autopep8==1.5
-isort==4.3.21
-lazy-object-proxy==1.4.3
-mccabe==0.6.1
-pycodestyle==2.5.0
-pylint==2.4.4
-pylint-django==2.0.13
-pylint-plugin-utils==0.6
-six==1.14.0
-typed-ast==1.4.1
-wrapt==1.11.2
+autopep8
+pylint
+pylint-django
