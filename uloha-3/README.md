@@ -10,7 +10,7 @@ Vytvořte konfigurační soubor `docker-compose.yml`, pomocí kterého bude sest
 
 Soubor `Dockerfile` už máte připravený a nemusíte do něj zasahovat.
 
-Až vám bude fungovat spuštění aplikace přes příkaz `docker compose up` (aplikace by se měla chovat stejně jako v předchozí úloze), přidejte do `docker-compose.yml` další službu s databází **PostgreSQL**. Použijte [oficiální postgres image z DockerHubu](https://hub.docker.com/_/postgres).
+Až vám bude fungovat spuštění aplikace přes příkaz `docker compose up` (aplikace by se měla chovat stejně jako v předchozí úloze), přidejte do `docker-compose.yml` další službu s databází **PostgreSQL 13.7**. Použijte [oficiální postgres image z DockerHubu](https://hub.docker.com/_/postgres).
 
 Následně nastavte proměnné prostředí pro službu aplikace (viz dále - `DB_ENGINE`, `DB_NAME` atd.)
 

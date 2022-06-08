@@ -16,7 +16,7 @@
        - DB_HOST=db
        - DB_PORT=5432
    db:
-     image: postgres
+     image: postgres:13.7
      environment:
        - POSTGRES_USER=petvet
        - POSTGRES_DB=petvet
