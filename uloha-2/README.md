@@ -18,7 +18,7 @@ Následně v běžícím kontejneru proveďte manuálně zbývající příkazy:
 - Spustit DB migraci: `python manage.py migrate`
 - Vytvořit superuživatele: `python manage.py createsuperuser`
 
-Užitečné instrukce pro `Dockerfile` najdete kromě [dokumentace](https://docs.docker.com/engine/reference/builder/) také na [stránkách workshopu](https://czechitas.orchi.page/linux/uzitecne/docker/).
+Užitečné instrukce pro `Dockerfile` najdete kromě [dokumentace](https://docs.docker.com/engine/reference/builder/) také na [stránkách workshopu](https://czechitas.orchi.page/devops/uzitecne/docker/).
 
 ## Nápověda
 

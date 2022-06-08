@@ -10,7 +10,7 @@ Zprovozněte aplikaci dle níže uvedeného postupu a ověřte její základní 
 
 _Pozor, nezapoměňte se v terminálu přepnout do podadresáře úlohy (`cd uloha-1`)._
 
-1. Zajistit, aby na cílovém počítači byl alespoň Python3 >= 3.6
+1. Zajistit, aby na cílovém počítači byl alespoň Python3 >= 3.8
    - _Tip: aktuální verzi Python3 zjistíte pomocí `python3 -V`_
 2. Vytvořit virtuální prostředí Pythonu: `python3 -m venv venv`
 3. Aktivovat virtuální prostředí: `source venv/bin/activate`

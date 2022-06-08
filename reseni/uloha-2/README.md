@@ -3,7 +3,7 @@
 1. V adresáři `uloha-2` vytvoříme soubor `Dockerfile`:
 
    ```dockerfile
-   FROM python:3.7.6-slim
+   FROM python:3.10.5-slim
 
    WORKDIR /app
 

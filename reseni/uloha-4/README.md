@@ -3,8 +3,6 @@
 1. V adresáři `uloha-4` upravíme existující soubor `docker-compose.yml` tak, aby obsahoval `volumes:`:
 
    ```yml
-   version: "3"
-
    services:
    app:
      build: .
@@ -33,14 +31,14 @@
 2. Z adresáře `uloha-4` spustíme služby aplikace (`app`) a databáze (`db`) na pozadí:
 
    ```
-   docker-compose up -d
+   docker compose up -d
    ```
 
 3. Spustíme požadované příkazy v běžícím kontejneru aplikace:
 
    ```
-   docker-compose exec app python manage.py migrate
-   docker-compose exec app python manage.py createsuperuser
+   docker compose exec app python manage.py migrate
+   docker compose exec app python manage.py createsuperuser
    ```
 
 4. Otevřeme stránku `http://localhost:8000/nasi-veterinari/` a zkontrolujeme, že obsahuje seznam veterinářů načítaný z databáze a že nezobrazuje chybu.
@@ -50,13 +48,13 @@
 6. Zastavíme a odstraníme všechny kontejnery služeb:
 
    ```
-   docker-compose down
+   docker compose down
    ```
 
 7. Znovu vytovříme kontejnery služeb (na pozadí):
 
    ```
-   docker-compose up -d
+   docker compose up -d
    ```
 
 8. Ověříme, že data přežila odstranění kontejneru s databází, např. opětovnou kontrolou zobrazení seznamu veterinářů: `http://localhost:8000/nasi-veterinari/`
